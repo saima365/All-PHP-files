@@ -2,19 +2,23 @@
 
 if (isset($_GET['submit'])) {
    $ageRange= $_GET['number'];
+   checkAgeRange($ageRange);
+}
 
-    if ($ageRange<12) {
+
+  function checkAgeRange($ageRange){
+    if ($ageRange<12 && $ageRange>=0 ) {
         echo "<h1>You are a child</h1>";
     }elseif ($ageRange>12 && $ageRange<18) {
         echo "<h1>You are Teenage</h1>";
     }elseif ($ageRange>=18) {
         echo "<h1>You are an Adult</h1>";
+    }elseif ($ageRange<0) {
+        echo "<h1>Invalid Age</h1>";
     }
+   }
 
-}
-
-
-
+    
 
 
 ?>
