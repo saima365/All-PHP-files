@@ -27,10 +27,23 @@ class Product{
        $data=file("productData.txt",FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
        $html="<table>";
        $html.="<tr><th>ID</th><th>Name</th><th>Price</th><th>Offer Price</th><th>Action</th></tr>";
-    //    foreach ($data as $key => $row){
-    //     list($id,$name,$price,$offerPrice)=explode()
-    //    }
+      //  foreach ($data as $key => $row){
+      //   list($id,$name,$price,$offerPrice)=explode(",",$row);
+      //   $html.="<tr><td>{$id}</td><td>{$name}</td><td>{$price}</td><td>{$offerPrice}</td><td><button><a href="">Edit</a></button> <button><a href="">Delete</a></button></td></tr>";
+
+      //  }
     } 
+
+    public static function delete($_id){
+      $data=file("productData.txt");
+      $product="";
+      foreach ( $data as $key => $value) {
+        list($id)=explode(",", $value);
+        if () {
+         
+        }
+      }
+    }
 
 
 }
